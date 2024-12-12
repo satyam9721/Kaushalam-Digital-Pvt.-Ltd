@@ -1,0 +1,244 @@
+/* Home Component Styles */
+.App {
+  margin-left: 350px;
+  margin-top: 50px;
+  max-width: 600px;
+ 
+  background-color: #1a1a1a; /* Single consistent background color */
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh; /* Ensure full viewport height */
+  box-sizing: border-box;
+}
+
+
+.task-input {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+  width: 100%;
+  justify-content: center; /* Center the input and button horizontally */
+  flex-wrap: wrap; /* Ensure proper wrapping on smaller screens */
+}
+
+.task-input span {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px; /* Add margin to separate the label from the input */
+  width: 100%;
+  text-align: left;
+}
+
+.task-input input {
+  flex: 1;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #181717;
+  border-radius: 4px;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+.task-input input:focus {
+  border-color: #007bff;
+}
+
+.task-input .add {
+  padding: 10px 15px;
+  font-size: 16px;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.task-input .add:hover {
+  background-color: #218838;
+}
+
+.task-list {
+  border-top: 1px solid #f28a8a;
+  padding-top: 10px;
+  width: 100%;
+}
+
+/* Task Component Styles */
+.task {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px;
+  background-color: #f8ee26;
+  border: 1px solid #f7ecec;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  align-items: center; /* Align items vertically */
+}
+
+.task.done {
+  background-color: #e9ecef;
+  text-decoration: line-through;
+  color: #6c757d;
+}
+
+.task span {
+  cursor: pointer;
+  font-size: 16px;
+  color: #0e0f0f;
+}
+
+.task-buttons {
+  display: flex;
+  gap: 10px;
+  align-items: center; /* Align buttons vertically */
+}
+
+.task-buttons .btn {
+  padding: 5px 10px;
+  font-size: 14px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.task-buttons .btn-danger {
+  background-color: #dc3545;
+  color: white;
+}
+
+.task-buttons .btn-danger:hover {
+  background-color: #c82333;
+}
+
+.task-buttons .btn-info {
+  background-color: #17a2b8;
+  color: white;
+}
+
+.task-buttons .btn-info:hover {
+  background-color: #138496;
+}
+
+.task-buttons .btn-primary {
+  background-color: #007bff;
+  color: white;
+}
+
+.task-buttons .btn-primary:hover {
+  background-color: #0069d9;
+}
+
+/* Responsive Design */
+
+/* Extra small devices (portrait phones, less than 576px) */
+@media (max-width: 575.98px) {
+  .App {
+    padding: 137px;
+    max-width: 100%;
+    min-height: auto;
+    
+  }
+
+  .task-input {
+    flex-direction: column; /* Stack inputs and button vertically */
+    gap: 5px;
+  }
+
+  .task-input span {
+    font-size: 16px;
+  }
+
+  .task-input input {
+    font-size: 14px;
+    padding: 8px;
+  }
+
+  .task-input .add {
+    font-size: 14px;
+    padding: 8px 10px;
+  }
+
+  .task {
+    flex-direction: column; /* Stack task text and buttons vertically */
+    align-items: flex-start; /* Align content to the start */
+  }
+
+  .task span {
+    font-size: 14px;
+  }
+
+  .task-buttons {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .task-buttons .btn {
+    font-size: 12px;
+    padding: 5px 8px;
+  }
+}
+
+/* Small devices (landscape phones, 576px to 767px) */
+@media (min-width: 576px) and (max-width: 767.98px) {
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Ensure the body takes full height */
+    margin: 0; /* Remove default margin */
+  }
+
+  .App {
+    padding: 20px;
+    max-width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .task-input {
+    flex-direction: row;
+    gap: 10px;
+  }
+
+  .task-input span {
+    font-size: 18px;
+  }
+
+  .task span {
+    font-size: 15px;
+  }
+}
+
+
+/* Medium devices (tablets, 768px to 991px) */
+@media (min-width: 768px) and (max-width: 991.98px) {
+  body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+  }
+
+  .App {
+    padding: 20px;
+    max-width: 80%;
+    margin: 0 auto; /* Center the .App horizontally */
+    box-sizing: border-box; /* Ensure padding is included in width */
+  }
+
+  .task-input {
+    flex-direction: row;
+    gap: 15px;
+    width: 100%; /* Ensure input spans the container width */
+  }
+
+  .task span {
+    font-size: 16px;
+    word-wrap: break-word; /* Prevent text overflow */
+  }
+}
