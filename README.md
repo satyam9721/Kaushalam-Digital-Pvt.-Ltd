@@ -39,4 +39,4 @@ delete:-http://localhost:5000/api/tasks/:id
 
 ### Clone the Repository
 ```bash
-git clone <repository-url>
+git clone <https://github.com/satyam9721/Kaushalam-Digital-Pvt.-Ltd.git>
