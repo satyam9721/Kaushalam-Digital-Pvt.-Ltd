@@ -17,6 +17,10 @@ A full-stack to-do list application where users can manage personal tasks with f
 - RESTful API endpoints to manage tasks:
   - `GET`, `POST`, `PUT`, `DELETE`
 - MongoDB integration for persistent data storage.
+- get:- http://localhost:5000/api/tasks
+post:-http://localhost:5000/api/tasks
+put:-http://localhost:5000/api/tasks/:id
+delete:-http://localhost:5000/api/tasks/:id
 
 ### User Interface
 - **Responsive Design**: Works seamlessly on desktop and mobile.
